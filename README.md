@@ -1,6 +1,6 @@
-# we-speak (voice-server)
+# we-speak (media-server)
 
-A real-time voice communication application based on [mediasoup-demo v3](https://github.com/versatica/mediasoup-demo).
+A real-time media communication application based on [mediasoup-demo v3](https://github.com/versatica/mediasoup-demo).
 
 ## Original Authors and Credits
 
@@ -55,8 +55,8 @@ By adding query parameters into the URL you can set certain settings of the appl
 * Clone the project:
 
 ```bash
-$ git clone https://github.com/your-username/voice-server.git
-$ cd voice-server
+$ git clone https://github.com/we-speak/media-server.git
+$ cd media-server
 ```
 
 * Ensure you have installed the [dependencies](https://mediasoup.org/documentation/v3/mediasoup/installation/#requirements) required by mediasoup to build.
@@ -76,13 +76,6 @@ $ cp config.example.js config.js
 
 **NOTE:** To be perfectly clear, "customize it for your scenario" is not something "optional". If you don't set proper values in `config.js` the application **won't work**. You must configure a tls certificate.
 
-* Set up the browser app:
-
-```bash
-$ cd app
-$ npm install --legacy-peer-deps
-```
-
 
 ## Run it locally
 
@@ -90,13 +83,6 @@ $ npm install --legacy-peer-deps
 
 ```bash
 $ cd server
-$ npm start
-```
-
-* In a different terminal build and run the browser application:
-
-```bash
-$ cd app
 $ npm start
 ```
 
@@ -109,12 +95,6 @@ If you configured a self-signed tls certificate, and receive wss: connection err
 
 * Build the production ready browser application:
 
-```bash
-$ cd app
-$ npm run build
-$ rm -rf ../server/public
-$ mv dist ../server/public
-```
 
 * Upload the entire `server` folder to your server and make your web server (Apache, Nginx, etc) expose the `server/public` folder.
 
