@@ -1,6 +1,5 @@
 const debug = require('debug');
-
-const APP_NAME = 'mediasoup-demo-server';
+const APP_NAME = 'media-server';
 
 class Logger
 {

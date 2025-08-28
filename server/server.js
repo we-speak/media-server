@@ -1,7 +1,16 @@
 #!/usr/bin/env node
 
-process.title = 'mediasoup-demo-server';
+process.title = 'media-server';
 process.env.DEBUG = process.env.DEBUG || '*INFO* *WARN* *ERROR*';
+// пока что анюзабл потом исправлю
+if (process.env.NODE_ENV === 'production') {
+  // В разработке включаем цвета
+  process.env.DEBUG_COLORS = '0';
+} else {
+  // В проде отключаем цвета
+  process.env.DEBUG_COLORS = '1';
+}
+
 
 const config = require('./config');
 
